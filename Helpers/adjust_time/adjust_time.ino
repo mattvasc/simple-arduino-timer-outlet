@@ -1,17 +1,27 @@
 #include <Wire.h>
 #include "DS1307.h"
 
+/*
+  Schematics:
+  ds1307:
+  GND - GND
+  VCC - 5V DC
+  SDA - Arduino A4 Pin
+  SCL - Arduino A5 Pin
+  
+*/
+
 DS1307 clock;//define a object of DS1307 class
 void setup()
 {
     Serial.begin(9600);
     Serial.println("Starting clock");
     clock.begin();
-    Serial.println("Printing time:");
+    Serial.println("Printing time: (hh:mm dd/MM/yyyy)");
     /*
-    clock.fillByYMD(2021,10,21); //year, month, day
-    clock.fillByHMS(22,30,30);  //hh:mm ss"
-    clock.fillDayOfWeek(THU); //MON, TUE, WED, THU, FRI, SAT or SUN
+    clock.fillByYMD(2021, 11, 02); //year, month, day
+    clock.fillByHMS(22, 12, 50);  //hh:mm ss"
+    clock.fillDayOfWeek(TUE); //MON, TUE, WED, THU, FRI, SAT or SUN
     clock.setTime();// write time to the RTC chip
     */
 

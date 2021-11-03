@@ -2,6 +2,16 @@
 
 
 /*
+  Schematics:
+  ds1307:
+  GND - GND
+  VCC - 5V DC
+  SDA - Arduino A4 Pin
+  SCL - Arduino A5 Pin
+  
+*/
+
+/*
  * D2 2
  * D3 3
  * D4 4
@@ -23,7 +33,7 @@ void setup() {
 // the loop function runs over and over again forever
 void loop() {
   digitalWrite(RELAY_PIN, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(1000);                       // wait for a second
+  delay(2000);                       // wait for a second
   digitalWrite(RELAY_PIN, LOW);    // turn the LED off by making the voltage LOW
-  delay(1000);                       // wait for a second
+  delay(2000);                       // wait for a second
 }
